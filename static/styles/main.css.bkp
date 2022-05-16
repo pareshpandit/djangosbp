@@ -1,0 +1,10 @@
+body{
+    background-color: aquamarine;
+}
+
+.error-messages {
+    color: red;
+    background: yellow;
+    font-size: 10pt;
+  }
+  
