@@ -23,8 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rt4oa$pcivkd4$x@l5n%x5p!xdh8!5=#cbmfyqq!jb0iuy-q4d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
+# ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['127.0.0.1', '127.0.0.1:8000','djangosbp.herokuapp.com']
 
 #Above 2 - edit @ 17 May 2022 15h21 via https://freedjango.com/deploy-django-on-heroku/
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     #new - 
-    'whitenoise.runserver_nostatic',
+    #'whitenoise.runserver_nostatic',
     
     'django.contrib.staticfiles',
 
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
     # new - 
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    #'whitenoise.middleware.WhiteNoiseMiddleware'
 
     'corsheaders.middleware.CorsMiddleware',
 
@@ -141,7 +142,7 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/images/'
 
 # new -
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
